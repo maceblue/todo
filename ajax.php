@@ -10,7 +10,7 @@ switch ($_REQUEST['do']) {
 			$file_name = $_REQUEST['list_id'].'.dat';
 			if (file_exists($file_name)) {
 				$lines = file($file_name);
-				$lines[] = $_REQUEST['entry'];	
+				$lines[] = $_REQUEST['entry']."\n";	
 			} else {
 				$lines = array($_REQUEST['entry']."\n");
 			}
