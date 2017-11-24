@@ -30,7 +30,7 @@ var list_id = 'list_1';
 
 function onBodyLoad(){
 	var todo = "";
-	
+	setTimeout(function() { window.scrollTo(0, 1) }, 100);
 	get_list();
 	
 	$("#remove").live("click",function(e){
