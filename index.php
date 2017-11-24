@@ -58,7 +58,10 @@ function save_todo(){
             type: 'POST',
             url: 'ajax.php?do=save_entry&list_id=' + list_id + '&entry=' + todo + '&token=HgjHGKJHjHJKhKhKHKh',
             contentType: "application/json; charset=utf-8",
-            success: function(){get_list();}
+            success: function(){
+            	$("#todo_list").html("");
+            	get_list();
+            }
         });
 	}
 }
