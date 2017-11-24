@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 if ($_REQUEST['token']!='HgjHGKJHjHJKhKhKHKh') {
 	exit;
 }
@@ -15,7 +16,7 @@ switch ($_REQUEST['do']) {
 			}
 			$content = implode("\n", $lines);
 			$handle = fopen($file_name, 'w');
-			fwrite($handle, $content));
+			fwrite($handle, $content);
 			fclose($handle);
 			
 			print 'OK';	

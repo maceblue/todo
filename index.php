@@ -28,7 +28,7 @@
 
 <script language="javascript">
 var i = localStorage.length;
-var list_id = list_1;
+var list_id = 'list_1';
 
 function onBodyLoad(){
 	var todo = "";
@@ -64,12 +64,12 @@ function onBodyLoad(){
 
 			$.ajax({
 	            type: 'POST',
-	            url: 'ajax.php?do=delete_entry&list_id=' + list_id + '&entry=' + index,
+	            url: 'ajax.php?do=delete_entry&list_id=' + list_id + '&entry=' + index + '&token=HgjHGKJHjHJKhKhKHKh',
 	            contentType: "application/json; charset=utf-8",
 	            data: '',
 	            timeout: 500,
 	            success: 'get_list'
-	        })
+	        });
 			
 		});
 	});
@@ -92,28 +92,26 @@ function save_todo(){
 		// store item in file via ajax
 		$.ajax({
             type: 'POST',
-            url: 'ajax.php?do=save_entry&list_id=' + list_id + '&entry=' + todo,
+            url: 'ajax.php?do=save_entry&list_id=' + list_id + '&entry=' + todo + '&token=HgjHGKJHjHJKhKhKHKh',
             contentType: "application/json; charset=utf-8",
             data: '',
             timeout: 500,
             success: 'get_list'
-        })
+        });
 	}
 }
 function get_list() {
 	$.ajax({
         type: 'POST',
-        url: 'ajax.php?do=get_list&list_id=' + list_id,
+        url: 'ajax.php?do=get_list&list_id=' + list_id + '&token=HgjHGKJHjHJKhKhKHKh',
         contentType: "application/json; charset=utf-8",
         timeout: 500,
         success: 'refresh_list'
-    })
-	
-	
+    });
 }
 function refresh_list($data) {
 	var data_obj = JSON.parse(data);
-	for (var a=0, a<data_obj.length, a++) {
+	for (var a=0; a<data_obj.length; a++) {
 		$("#todo_list").append('<li id="'+a+'"><a href="#">'+data_obj[a].entry+'</a><a href="#" data-rel="dialog" data-transition="slideup" id="remove">Remove</a></li>');
 	}
 	
