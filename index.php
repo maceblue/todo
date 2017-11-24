@@ -106,7 +106,7 @@ function get_list() {
         url: 'ajax.php?do=get_list&list_id=' + list_id + '&token=HgjHGKJHjHJKhKhKHKh',
         contentType: "application/json; charset=utf-8",
         timeout: 500,
-        success: 'refresh_list'
+        success: function(data) {refresh_list(data);}
     });
 }
 function refresh_list($data) {
