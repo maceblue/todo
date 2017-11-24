@@ -28,6 +28,7 @@ switch ($_REQUEST['do']) {
 			$file_name = $_REQUEST['list_id'].'.dat';
 			if (file_exists($file_name)) {
 				$lines = file($file_name);
+var_dump($lines);
 				if (!empty($lines) && !empty($lines[$_REQUEST['entry']])) {
 					unset($lines[$_REQUEST['entry']]);
 				}
