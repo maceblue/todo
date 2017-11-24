@@ -33,7 +33,7 @@ switch ($_REQUEST['do']) {
 				}
 				$content = !empty($lines)? implode("\n", $lines) : '';
 				$handle = fopen($file_name, 'w');
-				fwrite($handle, implode("\n", $content));
+				fwrite($handle, $content);
 				fclose($handle);
 				print 'OK';	
 			}
