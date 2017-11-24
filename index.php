@@ -44,7 +44,7 @@ function onBodyLoad(){
 	            type: 'POST',
 	            url: 'ajax.php?do=delete_entry&list_id=' + list_id + '&entry=' + index + '&token=HgjHGKJHjHJKhKhKHKh',
 	            contentType: "application/json; charset=utf-8",
-	            success: function(get_list();)
+	            success: function(){get_list();}
 	        });
 			
 		});
