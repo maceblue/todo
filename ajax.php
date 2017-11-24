@@ -12,9 +12,9 @@ switch ($_REQUEST['do']) {
 				$lines = file($file_name);
 				$lines[] = $_REQUEST['entry'];	
 			} else {
-				$lines = array($_REQUEST['entry']);
+				$lines = array($_REQUEST['entry']."\n");
 			}
-			$content = implode("\n", $lines);
+			$content = implode("", $lines);
 			$handle = fopen($file_name, 'w');
 			fwrite($handle, $content);
 			fclose($handle);
@@ -31,7 +31,7 @@ switch ($_REQUEST['do']) {
 				if (!empty($lines) && !empty($lines[$_REQUEST['entry']])) {
 					unset($lines[$_REQUEST['entry']]);
 				}
-				$content = !empty($lines)? implode("\n", $lines) : '';
+				$content = !empty($lines)? implode("", $lines) : '';
 				$handle = fopen($file_name, 'w');
 				fwrite($handle, $content);
 				fclose($handle);
