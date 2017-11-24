@@ -1,0 +1,31 @@
+Todo List Web-App
+
+Inspiration bei Apps wie 
+Wonderlist
+Family Cockpit
+...
+
+
+Todo-Liste
+- mobile Ansicht
+- Listen hinzufügen
+- Aufgaben hinzufügen
+- Aufgaben farbig machen zur Zuweisung an Person
+- Aufgaben mit Fälligkeitsdatum versehen
+- Bei Fälligkeit Erinnerung aktivierbar
+
+
+Kalender
+- verschiedene Ansichten
+- Handling wie beim IPhone Kalender
+
+
+Daten speichern
+Jede TODO-Liste legt eine Datei im Verzeichnis 'data' an
+Darin werden Zeilenweise die Einträge gesammelt (HTML oder JSON-String)
+
+
+Push Notification
+via Dienst 'Pushover Notifications'
+https://pushover.net/
+seen: http://www.meintechblog.de/2013/11/howto-mit-fhem-push-nachrichten-aufs-iphone-schicken-update/
