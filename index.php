@@ -14,7 +14,6 @@
 	</head> 
 	<body onload="onBodyLoad()"> 
 		<div data-role="header" data-position="inline" data-theme="b">
-			<!--<a href="#" data-theme="c" data-icon="delete" iconpos="notext" data-position="inline" data-rel="dialog" id="clear">Clear</a>-->
 			<h1>TODO</h1>
 			<a href="add_todo.html" data-icon="add" iconpos="notext" data-position="inline" data-rel="dialog">neue Aufgabe</a>
 		</div><p>
@@ -27,7 +26,6 @@
 </html>
 
 <script language="javascript">
-var i = localStorage.length;
 var list_id = 'list_1';
 
 function onBodyLoad(){
@@ -46,7 +44,7 @@ function onBodyLoad(){
 	            type: 'POST',
 	            url: 'ajax.php?do=delete_entry&list_id=' + list_id + '&entry=' + index + '&token=HgjHGKJHjHJKhKhKHKh',
 	            contentType: "application/json; charset=utf-8",
-	            success: 'get_list'
+	            success: function(get_list();)
 	        });
 			
 		});
@@ -73,14 +71,15 @@ function get_list() {
     });
 }
 function refresh_list(data) {
-	var data_obj = JSON.parse(data);
-	for (var a=0; a<data_obj.length; a++) {
-		$("#todo_list").append('<li id="'+a+'"><a href="#">'+data_obj[a]+'</a><a href="#" data-rel="dialog" data-transition="slideup" id="remove">Remove</a></li>');
+	if (data!=null && typeof data!='undefined' && data!='') {
+		var data_obj = JSON.parse(data);
+		for (var a=0; a<data_obj.length; a++) {
+			$("#todo_list").append('<li id="'+a+'"><a href="#">'+data_obj[a]+'</a><a href="#" data-rel="dialog" data-transition="slideup" id="remove">Remove</a></li>');
+		}
+		
+		// Refresh list so jquery mobile can apply iphone look to the list
+		$("#todo_list").listview();
+		$("#todo_list").listview("refresh");
 	}
-	
-	// Refresh list so jquery mobile can apply iphone look to the list
-	$("#todo_list").listview();
-	$("#todo_list").listview("refresh");	
-	i++;
 }
 </script>
