@@ -109,7 +109,7 @@ function get_list() {
         success: function(data) {refresh_list(data);}
     });
 }
-function refresh_list($data) {
+function refresh_list(data) {
 	var data_obj = JSON.parse(data);
 	for (var a=0; a<data_obj.length; a++) {
 		$("#todo_list").append('<li id="'+a+'"><a href="#">'+data_obj[a]+'</a><a href="#" data-rel="dialog" data-transition="slideup" id="remove">Remove</a></li>');
