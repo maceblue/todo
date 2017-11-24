@@ -96,7 +96,7 @@ function save_todo(){
             contentType: "application/json; charset=utf-8",
             data: '',
             timeout: 500,
-            success: 'get_list'
+            success: function(){get_list();}
         });
 	}
 }
