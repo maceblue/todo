@@ -45,8 +45,7 @@ switch ($_REQUEST['do']) {
 			$file_name = $_REQUEST['list_id'].'.dat';
 			if (file_exists($file_name)) {
 				$lines = file($file_name);
-		var_dump($lines);
-				print json_decode($lines);
+				print json_encode($lines);
 			}
 		}
 		break;
