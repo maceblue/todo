@@ -24,12 +24,11 @@ switch ($_REQUEST['do']) {
 		break;
 
 	case 'delete_entry':
-		if (!empty($_REQUEST['list_id']) && !empty($_REQUEST['entry'])) {
+		if (!empty($_REQUEST['list_id']) && isset($_REQUEST['entry'])) {
 			$file_name = $_REQUEST['list_id'].'.dat';
 			if (file_exists($file_name)) {
 				$lines = file($file_name);
-var_dump($lines);
-				if (!empty($lines) && !empty($lines[$_REQUEST['entry']])) {
+				if (!empty($lines) && isset($lines[$_REQUEST['entry']])) {
 					unset($lines[$_REQUEST['entry']]);
 				}
 				$content = !empty($lines)? implode("", $lines) : '';
