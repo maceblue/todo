@@ -58,7 +58,7 @@ function send_push($message) {
 			CURLOPT_URL => "https://api.pushover.net/1/messages.json",
 			CURLOPT_POSTFIELDS => array(
 				"token" => "argtgpis3yx9em28n5xmxitgbz7erh",
-				"user" => "villa-pusher",
+				"user" => "ump3zqywdoozyddvbf5gpzyqhwp451",
 				"message" => $message,
 			)
 		)
