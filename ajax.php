@@ -18,7 +18,7 @@ switch ($_REQUEST['do']) {
 			$handle = fopen($file_name, 'w');
 			fwrite($handle, $content);
 			fclose($handle);
-			
+			send_push('Ein TODO-Eintrag wurde hinzugefügt.');
 			print 'OK';	
 		}
 		break;
@@ -35,6 +35,7 @@ switch ($_REQUEST['do']) {
 				$handle = fopen($file_name, 'w');
 				fwrite($handle, $content);
 				fclose($handle);
+				send_push('Ein TODO-Eintrag wurde entfernt.');
 				print 'OK';	
 			}
 		}
@@ -49,6 +50,21 @@ switch ($_REQUEST['do']) {
 			}
 		}
 		break;
+}
+
+function send_push($message) {
+	curl_setopt_array(
+		$ch = curl_init(), array(
+			CURLOPT_URL => "https://api.pushover.net/1/messages.json",
+			CURLOPT_POSTFIELDS => array(
+				"token" => "ump3zqywdoozyddvbf5gpzyqhwp451",
+				"user" => "villa-pusher",
+				"message" => $message,
+			)
+		)
+	);
+	curl_exec($ch);
+	curl_close($ch);
 }
 
 ?>

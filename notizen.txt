@@ -29,3 +29,5 @@ Push Notification
 via Dienst 'Pushover Notifications'
 https://pushover.net/
 seen: http://www.meintechblog.de/2013/11/howto-mit-fhem-push-nachrichten-aufs-iphone-schicken-update/
+Key: ump3zqywdoozyddvbf5gpzyqhwp451
+E-Mail: 78o9xcqi3a@pomail.net
