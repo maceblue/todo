@@ -18,7 +18,7 @@ switch ($_REQUEST['do']) {
 			$handle = fopen($file_name, 'w');
 			fwrite($handle, $content);
 			fclose($handle);
-			send_push('Ein TODO-Eintrag wurde hinzugefügt.');
+			send_push('TODO-Eintrag wurde hinzugefügt: ' . $_REQUEST['entry']);
 			print 'OK';	
 		}
 		break;
