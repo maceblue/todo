@@ -38,6 +38,7 @@
 			</ul>
 		</div>	
 		<div data-role="footer" data-position="inline" data-theme="b">
+			<a href="index.html" data-role="button" data-icon="delete" data-iconpos="notext">Delete</a>
 			<a href="kalender.php" class="ui-icon ui-icon-calendar">Kalender</a>
 			<a class="ui-icon-check" href="index.php">TODO</a>
 			<a class="ui-icon-shop" href="einkauf.php">Einkauf</a>
