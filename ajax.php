@@ -35,12 +35,29 @@ switch ($_REQUEST['do']) {
 				$handle = fopen($file_name, 'w');
 				fwrite($handle, $content);
 				fclose($handle);
-				send_push('Ein TODO-Eintrag wurde entfernt.');
 				print 'OK';	
 			}
 		}
 		break;
 
+	case 'save_shopping_entry':
+		if (!empty($_REQUEST['list_id'])) {
+			$file_name = $_REQUEST['list_id'].'.dat';
+			if (file_exists($file_name)) {
+				$lines = file($file_name);
+				$lines[] = $_REQUEST['entry']."\n";	
+			} else {
+				$lines = array($_REQUEST['entry']."\n");
+			}
+			$content = implode("", $lines);
+			$handle = fopen($file_name, 'w');
+			fwrite($handle, $content);
+			fclose($handle);
+			print 'OK';	
+		}
+		break;
+
+	
 	case 'get_list':
 		if (!empty($_REQUEST['list_id'])) {
 			$file_name = $_REQUEST['list_id'].'.dat';
