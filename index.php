@@ -20,7 +20,7 @@
 			background-image: linear-gradient(#fff,#F55);
 		}
 		.mittel {
-			background-image: linear-gradient(#fff,#55F);
+			background-image: linear-gradient(#fff,#FF0);
 		}
 		.niedrig {
 			background-image: linear-gradient(#fff,#5F5);
