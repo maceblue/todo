@@ -34,7 +34,7 @@
 			<a href="add_shopping.html" data-icon="add" iconpos="notext" data-position="inline" data-rel="dialog">neuer Artikel</a>
 		</div><p>
 		<div class="content-primary" style="margin:3px;">	
-			<ul data-role="listview" data-inset="true" data-split-icon="minus" data-split-theme="d" id="todo_list">
+			<ul data-role="listview" data-inset="true" data-split-icon="minus" data-split-theme="d" id="shopping_list">
 			</ul>
 		</div>	
 		<div data-role="footer" data-position="inline" data-theme="b">
