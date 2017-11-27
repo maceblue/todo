@@ -25,6 +25,7 @@
 		.niedrig {
 			background-image: linear-gradient(#fff,#5F5);
 		}
+		[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}  
 	</style>
 	</head> 
 	<body onload="onBodyLoad()"> 
@@ -37,9 +38,9 @@
 			</ul>
 		</div>	
 		<div data-role="footer" data-position="inline" data-theme="b">
-			<a class="ui-icon-calendar" href="kalender.php"></a>
-			<a class="ui-icon-check" href="index.php"></a>
-			<a class="ui-icon-shop" href="einkauf.php"></a>
+			<a class="ui-icon-calendar" href="kalender.php">K</a>
+			<a class="ui-icon-check" href="index.php">T</a>
+			<a class="ui-icon-shop" href="einkauf.php">E</a>
 		</div>
 	</body>
 </html>
