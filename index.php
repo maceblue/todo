@@ -36,7 +36,11 @@
 			<ul data-role="listview" data-inset="true" data-split-icon="minus" data-split-theme="d" id="todo_list">
 			</ul>
 		</div>	
-		
+		<div data-role="footer" data-position="inline" data-theme="b">
+			<a class="ui-icon-calendar" href="kalender.php"></a>
+			<a class="ui-icon-check" href="index.php"></a>
+			<a class="ui-icon-shop" href="einkauf.php"></a>
+		</div>
 	</body>
 </html>
 
