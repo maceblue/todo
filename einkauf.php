@@ -77,7 +77,7 @@ function save_shopping(){
 		// store item in file via ajax
 		$.ajax({
             type: 'POST',
-            url: 'ajax.php?do=save_shopping_entry&list_id=' + list_id + '&entry=' + artikel '&token=HgjHGKJHjHJKhKhKHKh',
+            url: 'ajax.php?do=save_shopping_entry&list_id=' + list_id + '&entry=' + artikel + '&token=HgjHGKJHjHJKhKhKHKh',
             contentType: "application/json; charset=utf-8",
             success: function(){
             	$("#shopping_list").html("");
