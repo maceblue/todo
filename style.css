@@ -24,3 +24,12 @@
     width: 30px;
     height: 30px;
 }
+.ui-icon, .ui-icon-searchfield:after {
+    /* background: #666; */
+    /* background: rgba(0,0,0,.4); */
+    /* background-image: url(images/icons-18-white.png); */
+    /* background-repeat: no-repeat; */
+    -moz-border-radius: 22px;
+    /* -webkit-border-radius: 9px; */
+    border-radius: 22px;
+}
