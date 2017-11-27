@@ -15,6 +15,17 @@
 	</script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js">
 	</script>
+	<style type="text/css">
+		.hoch {
+			background-image: linear-gradient(#fff,#F55);
+		}
+		.mittel {
+			background-image: linear-gradient(#fff,#55F);
+		}
+		.niedrig {
+			background-image: linear-gradient(#fff,#5F5);
+		}
+	</style>
 	</head> 
 	<body onload="onBodyLoad()"> 
 		<div data-role="header" data-position="inline" data-theme="b">
