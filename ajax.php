@@ -10,9 +10,9 @@ switch ($_REQUEST['do']) {
 			$file_name = $_REQUEST['list_id'].'.dat';
 			if (file_exists($file_name)) {
 				$lines = file($file_name);
-				$lines[] = $_REQUEST['entry']."\n";	
+				$lines[] = $_REQUEST['entry']."|".$_REQUEST['prio']."\n";	
 			} else {
-				$lines = array($_REQUEST['entry']."\n");
+				$lines = array($_REQUEST['entry']."|".$_REQUEST['prio']."\n");
 			}
 			$content = implode("", $lines);
 			$handle = fopen($file_name, 'w');
@@ -45,8 +45,13 @@ switch ($_REQUEST['do']) {
 		if (!empty($_REQUEST['list_id'])) {
 			$file_name = $_REQUEST['list_id'].'.dat';
 			if (file_exists($file_name)) {
+				$json_out = array();
 				$lines = file($file_name);
-				print json_encode($lines);
+				foreach ($lines as $line) {
+					$tmp = explode("|", $line);
+					$json_out[] = array('entry' => $tmp[0], 'prio' => $tmp[1]);
+				}
+				print json_encode($json_out);
 			}
 		}
 		break;
