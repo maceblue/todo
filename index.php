@@ -11,22 +11,11 @@
 	<link rel="apple-touch-icon" href="icon.png">
 	<link rel="apple-touch-startup-image" href="icon.png">
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="style.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
 	</script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js">
 	</script>
-	<style type="text/css">
-		.hoch {
-			background-image: linear-gradient(#fff,#F55);
-		}
-		.mittel {
-			background-image: linear-gradient(#fff,#FF0);
-		}
-		.niedrig {
-			background-image: linear-gradient(#fff,#5F5);
-		}
-		[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;} 
-	</style>
 	</head> 
 	<body onload="onBodyLoad()"> 
 		<div data-role="header" data-position="inline" data-theme="b">
@@ -38,9 +27,9 @@
 			</ul>
 		</div>	
 		<div data-role="footer" data-position="inline" data-theme="b">
-			<a href="kalender.php" style="margin-bottom:15px; margin-left:15px;" data-role="button" data-icon="grid" data-iconpos="notext">Kalender</a>
+			<a href="kalender.php" style="margin-bottom:15px; margin-left:15px;" data-role="button" data-icon="calendar" data-iconpos="notext">Kalender</a>
 			<a href="index.php" style="margin-bottom:15px; margin-left:15px;" data-role="button" data-icon="check" data-iconpos="notext">TODO</a>
-			<a href="einkauf.php" style="margin-bottom:15px; margin-left:15px;" data-role="button" data-icon="star" data-iconpos="notext">Einkauf</a>
+			<a href="einkauf.php" style="margin-bottom:15px; margin-left:15px;" data-role="button" data-icon="shop" data-iconpos="notext">Einkauf</a>
 		</div>
 	</body>
 </html>
