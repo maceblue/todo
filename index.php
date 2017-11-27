@@ -56,11 +56,13 @@ function onBodyLoad(){
 }
 function save_todo(){
 	var todo = $("#textinput1").val();
+	var prio = $("#prioselect").val();
+
 	if(todo.length){
 		// store item in file via ajax
 		$.ajax({
             type: 'POST',
-            url: 'ajax.php?do=save_entry&list_id=' + list_id + '&entry=' + todo + '&token=HgjHGKJHjHJKhKhKHKh',
+            url: 'ajax.php?do=save_entry&list_id=' + list_id + '&entry=' + todo + '&prio=' +prio+ '&token=HgjHGKJHjHJKhKhKHKh',
             contentType: "application/json; charset=utf-8",
             success: function(){
             	$("#todo_list").html("");

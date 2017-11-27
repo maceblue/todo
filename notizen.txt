@@ -3,6 +3,7 @@ Todo List Web-App
 Inspiration bei Apps wie 
 Wonderlist
 Family Cockpit
+FAMANICE
 ...
 
 
@@ -18,6 +19,10 @@ Todo-Liste
 Kalender
 - verschiedene Ansichten
 - Handling wie beim IPhone Kalender
+
+
+Einkaufsliste
+- autosuggest mit bereits eingegebenen Einträgen
 
 
 Daten speichern
