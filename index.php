@@ -26,6 +26,9 @@
 			background-image: linear-gradient(#fff,#5F5);
 		}
 		[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}  
+		[data-role=footer].a {
+			margin-bottom: 20px;
+		}
 	</style>
 	</head> 
 	<body onload="onBodyLoad()"> 
