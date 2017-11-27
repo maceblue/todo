@@ -38,7 +38,7 @@
 			</ul>
 		</div>	
 		<div data-role="footer" data-position="inline" data-theme="b">
-			<a href="kalender.php" data-icon="calendar" iconpos="notext" data-position="inline" data-rel="dialog">Kalender</a>
+			<a href="kalender.php" class="ui-icon ui-icon-calendar">Kalender</a>
 			<a class="ui-icon-check" href="index.php">TODO</a>
 			<a class="ui-icon-shop" href="einkauf.php">Einkauf</a>
 		</div>
