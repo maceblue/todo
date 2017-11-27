@@ -98,7 +98,7 @@ function refresh_list(data) {
 	if (data!=null && typeof data!='undefined' && data!='') {
 		var data_obj = JSON.parse(data);
 		for (var a=0; a<data_obj.length; a++) {
-			$("#shopping_list").append('<li id="'+a+'" class="'+data_obj[a].prio+'"><a href="#">'+data_obj[a].entry+'</a><a href="#" data-rel="dialog" data-transition="slideup" id="remove">Remove</a></li>');
+			$("#shopping_list").append('<li id="'+a+'"><a href="#">'+data_obj[a].entry+'</a><a href="#" data-rel="dialog" data-transition="slideup" id="remove">Remove</a></li>');
 		}
 		
 		// Refresh list so jquery mobile can apply iphone look to the list

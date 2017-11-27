@@ -65,8 +65,13 @@ switch ($_REQUEST['do']) {
 				$json_out = array();
 				$lines = file($file_name);
 				foreach ($lines as $line) {
-					$tmp = explode("|", $line);
-					$json_out[] = array('entry' => $tmp[0], 'prio' => $tmp[1]);
+					if (strpos($line, '|')!==false) {
+						$tmp = explode("|", $line);
+						$json_out[] = array('entry' => $tmp[0], 'prio' => $tmp[1]);
+					} else {
+						$json_out[] = array('entry' => $line);
+					}
+					
 				}
 				print json_encode($json_out);
 			}
