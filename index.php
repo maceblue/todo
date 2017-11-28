@@ -29,7 +29,7 @@
 		<div data-role="footer" data-position="inline" data-theme="b">
 			<a href="kalender.php" class="link" data-role="button" data-icon="calendar" data-iconpos="notext">Kalender</a>
 			<a href="index.php" class="link" data-role="button" data-icon="check" data-iconpos="notext">TODO</a>
-			<a href="einkauf.php" class="link" data-role="button" data-icon="shop" data-iconpos="notext">Einkauf</a>
+			<a href="einkauf.php" onclick="onBodyLoad();" class="link" data-role="button" data-icon="shop" data-iconpos="notext">Einkauf</a>
 		</div>
 	</body>
 </html>
