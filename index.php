@@ -17,7 +17,7 @@
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js">
 	</script>
 	</head> 
-	<body> 
+	<body onload="onBodyLoad()"> 
 		<div data-role="header" data-position="inline" data-theme="b">
 			<h1>TODO</h1>
 			<a href="add_todo.html" data-icon="add" iconpos="notext" data-position="inline" data-rel="dialog">neue Aufgabe</a>
@@ -36,9 +36,7 @@
 
 <script language="javascript">
 var list_id = 'list_1';
-$("document").ready(function() {
-    onBodyLoad();
-});
+
 function onBodyLoad(){
 	var todo = "";
 	setTimeout(function() { window.scrollTo(0, 1) }, 100);
