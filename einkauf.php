@@ -17,7 +17,7 @@
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js">
 	</script>
 	</head> 
-	<body onload="onBodyLoad()"> 
+	<body> 
 		<div data-role="header" data-position="inline" data-theme="b">
 			<h1>Einkauf</h1>
 			<a href="add_shopping.html" data-icon="add" iconpos="notext" data-position="inline" data-rel="dialog">neuer Artikel</a>
@@ -40,6 +40,7 @@ $("document").ready(function() {
     onBodyLoad();
 });
 function onBodyLoad(){
+	alert('h')
 	var todo = "";
 	setTimeout(function() { window.scrollTo(0, 1) }, 100);
 	get_list();
