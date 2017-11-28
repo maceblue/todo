@@ -37,3 +37,6 @@ seen: http://www.meintechblog.de/2013/11/howto-mit-fhem-push-nachrichten-aufs-ip
 User: ump3zqywdoozyddvbf5gpzyqhwp451
 Api-Token: argtgpis3yx9em28n5xmxitgbz7erh
 E-Mail: 78o9xcqi3a@pomail.net
+
+jquery icons:
+http://demos.jquerymobile.com/1.5.0-alpha.1/icons/
