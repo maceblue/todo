@@ -36,7 +36,9 @@
 
 <script language="javascript">
 var list_id = 'list_1';
-
+$("document").ready(function() {
+    onBodyLoad();
+});
 function onBodyLoad(){
 	var todo = "";
 	setTimeout(function() { window.scrollTo(0, 1) }, 100);
