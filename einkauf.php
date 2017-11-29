@@ -36,8 +36,8 @@
 
 <script language="javascript">
 var list_id = 'shopping_list_1';
-$(document).bind("pagechange", function (event, data) {
-    onBodyLoad();
+$(document).bind("pagechange", function () {
+    alert('pagechange');
 });
 function onBodyLoad(){
 	var todo = "";
