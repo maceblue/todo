@@ -37,7 +37,7 @@
 <script language="javascript">
 var list_id = 'list_1';
 
-$(document).bind("pageload", function () {
+$(document).bind("pagechange", function () {
     onBodyLoad();
 });
 

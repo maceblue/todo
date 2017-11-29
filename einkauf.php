@@ -36,7 +36,7 @@
 
 <script language="javascript">
 var list_id = 'shopping_list_1';
-$(document).bind("pageload", function () {
+$(document).bind("pagechange", function () {
     onBodyLoad();
 });
 function onBodyLoad(){
