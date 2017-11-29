@@ -36,8 +36,8 @@
 
 <script language="javascript">
 var list_id = 'shopping_list_1';
-$(document).bind("pageinit", function () {
-    alert('pageinit');
+$(document).bind("pageload", function () {
+    onBodyLoad();
 });
 function onBodyLoad(){
 	var todo = "";
