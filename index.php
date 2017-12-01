@@ -37,10 +37,12 @@
 <script language="javascript">
 var list_id = 'list_1';
 
-$(document).bind("pagechange", function () {
+// $(document).bind("pagechange", function () {
+//     onBodyLoad();
+// });
+$(document).on("load", function () {
     onBodyLoad();
 });
-
 function onBodyLoad(){
 	var todo = "";
 	setTimeout(function() { window.scrollTo(0, 1) }, 100);
